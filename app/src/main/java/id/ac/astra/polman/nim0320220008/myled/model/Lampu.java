@@ -10,7 +10,7 @@ public class Lampu {
     private Integer green;
     private Integer blue;
 
-    public Lampu(String lampuId, String ruanganId, String nama, String status, String creadby, Integer red, Integer green, Integer blue, Integer serial_number, Integer pin) {
+    public Lampu(String lampuId, String ruanganId, String nama, String status, String creadby, Integer red, Integer green, Integer blue, String serial_number, Integer pin) {
         this.lampuId = lampuId;
         this.ruanganId = ruanganId;
         this.nama = nama;
@@ -23,15 +23,15 @@ public class Lampu {
         this.pin = pin;
     }
 
-    public Integer getSerial_number() {
+    public String getSerial_number() {
         return serial_number;
     }
 
-    public void setSerial_number(Integer serial_number) {
+    public void setSerial_number(String serial_number) {
         this.serial_number = serial_number;
     }
 
-    private Integer serial_number;
+    private String serial_number;
 
 
     public Lampu(String lampuId, String ruanganId, String nama, String status, String creadby, Integer red, Integer green, Integer blue, Integer pin) {

@@ -31,7 +31,7 @@ public class AddEditRoomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_edit_ruangan);
 
         // Initialize Firebase Database reference
-        databaseUsers = FirebaseDatabase.getInstance().getReference("smart_home/rumah");
+        databaseUsers = FirebaseDatabase.getInstance().getReference("smart_home/ruangan");
 
         // Initialize EditText
         editTextName = findViewById(R.id.editTextName);

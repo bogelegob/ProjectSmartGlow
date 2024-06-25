@@ -96,7 +96,6 @@ public class AddEditPerangkatActivity extends AppCompatActivity {
         String serial = editSerialNumber.getText().toString().trim();
         String pin = editJumlahPin.getText().toString().trim();
 
-        int serialnumber = Integer.parseInt(serial);
         int jumlahpin = Integer.parseInt(pin);
 
         if (!TextUtils.isEmpty(name)) {
@@ -109,7 +108,7 @@ public class AddEditPerangkatActivity extends AppCompatActivity {
                         String newUserId = String.valueOf(userCount + 1); // Generate ID berdasarkan jumlah user + 1
                         String bro = "lampu_id_"+newUserId;
 
-                        Lampu user = new Lampu(bro, houseid, name, "Aktif", creadby,red,green,blue,serialnumber,jumlahpin);
+                        Lampu user = new Lampu(bro, houseid, name, "Aktif", creadby,red,green,blue,serial,jumlahpin);
                         // Simpan user ke Firebase Database
                         databaseUsers.child(bro).setValue(user, new DatabaseReference.CompletionListener() {
                             @Override
@@ -130,7 +129,7 @@ public class AddEditPerangkatActivity extends AppCompatActivity {
                     }
                 });
             } else {
-                Lampu user = new Lampu(userId, houseid, name, "Aktif", creadby,red,green,blue,serialnumber,jumlahpin);
+                Lampu user = new Lampu(userId, houseid, name, "Aktif", creadby,red,green,blue,serial,jumlahpin);
                 // Update user di Firebase Database
                 databaseUsers.child(userId).setValue(user, new DatabaseReference.CompletionListener() {
                     @Override
