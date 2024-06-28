@@ -21,7 +21,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:padding="15sp"
-            android:src="@drawable/home_1" />
+            android:src="@drawable/shofabaru" />
 
         <LinearLayout
             android:layout_width="0dp"

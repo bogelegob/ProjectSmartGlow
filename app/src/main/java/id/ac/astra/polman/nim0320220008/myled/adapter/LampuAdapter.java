@@ -48,7 +48,7 @@ public class LampuAdapter extends ArrayAdapter<Lampu> {
         if (oi != null) {
             txtData.setText(oi.getNama());
             txtDataDetail.setText(oi.getStatus());
-            imgDevice.setImageResource(R.drawable.shofabaru);
+            //imgDevice.setImageResource(R.drawable.shofabaru);
 
             btnDevice.setChecked(oi.getStatus().equals("on")); // Set switch status based on current data
         }

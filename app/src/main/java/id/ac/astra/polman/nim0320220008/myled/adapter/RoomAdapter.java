@@ -24,7 +24,7 @@ public class RoomAdapter extends ArrayAdapter<Ruangan> {
     private String creadby;
 
     public RoomAdapter(Context context, List<Ruangan> houses, String creadby) {
-        super(context, R.layout.layout_home_list, houses);
+        super(context, R.layout.layout_room_list, houses);
         this.context = (Activity) context;
         this.RuanganList = houses;
         this.creadby = creadby;
@@ -37,7 +37,7 @@ public class RoomAdapter extends ArrayAdapter<Ruangan> {
 
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.layout_home_list, parent, false);
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.layout_room_list, parent, false);
         }
 
         // Lookup view for data population
@@ -53,7 +53,7 @@ public class RoomAdapter extends ArrayAdapter<Ruangan> {
             txtData.setText(oi.getNama());
             txtDataDetail.setText(oi.getRumahId());
             // Set image resource if you have any
-            imgDevice.setImageResource(R.drawable.shofabaru);
+            //imgDevice.setImageResource(R.drawable.shofabaru);
         }
 
         // Set onClickListener for the convertView (item in the list)

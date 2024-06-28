@@ -55,7 +55,7 @@
                     android:layout_height="52dp"
                     android:color="#FFF"
                     android:padding="15sp"
-                    android:src="@drawable/shofabaru" />
+                    android:src="@drawable/network" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
                     android:layout_height="52dp"
                     android:color="#FFF"
                     android:padding="15sp"
-                    android:src="@drawable/shofabaru" />
+                    android:src="@drawable/network" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -180,7 +180,7 @@
                     android:layout_height="52dp"
                     android:color="#FFF"
                     android:padding="15sp"
-                    android:src="@drawable/shofabaru" />
+                    android:src="@drawable/network" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"

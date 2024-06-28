@@ -42,10 +42,21 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="5dp">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txt_owner"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="10dp"-->
+<!--                    android:gravity="center_vertical"-->
+<!--                    android:text="Nama Owner"-->
+<!--                    android:textColor="#FFFFFF"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textStyle="bold" />-->
 
                 <TextView
                     android:id="@+id/txt_house_name"
@@ -72,11 +83,11 @@
 
             <ImageView
                 android:id="@+id/imgDevice2"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="match_parent"
+                android:layout_gravity="end|center_vertical"
                 android:layout_marginStart="10dp"
-                android:src="@drawable/alarm"
-                android:layout_gravity="end|center_vertical"/>
+                android:src="@drawable/shofabaru" />
 
         </LinearLayout>
 

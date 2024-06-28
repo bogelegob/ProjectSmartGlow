@@ -56,15 +56,18 @@ public class MainActivity_Ruangan extends AppCompatActivity {
             String creadby = intent.getStringExtra("creadby");
             String houseName = intent.getStringExtra("house_name");
             String houseAddress = intent.getStringExtra("house_address");
+            String owner = intent.getStringExtra("owner");
 
             // Set data to views in activity_detail.xml
             //TextView txtHouseId = findViewById(R.id.txt_house_id);
             TextView txtHouseName = findViewById(R.id.txt_house_name);
             TextView txtHouseAddress = findViewById(R.id.txt_house_address);
+            TextView txtOwner = findViewById(R.id.txt_owner);
 
             //txtHouseId.setText(houseId);
             txtHouseName.setText(houseName);
             txtHouseAddress.setText(houseAddress);
+            txtOwner.setText(owner);
 
             // Query to filter rooms based on houseId
             Query query = databaseUsers.orderByChild("rumahId").equalTo(houseId);

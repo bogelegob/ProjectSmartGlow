@@ -36,6 +36,7 @@ public class MainActivity_Rumah extends AppCompatActivity {
     private List<Rumah> housess;
     private HouseAdapter houseAdapter;
     private Button addButton;
+    private TextView user;
     private DatabaseReference databaseUsers;
 
     @Override
@@ -57,13 +58,15 @@ public class MainActivity_Rumah extends AppCompatActivity {
 //        // Buat adapter dan hubungkan dengan ListView
 //        houseAdapter = new HouseAdapter(this, houses);
 //        houseListView.setAdapter(houseAdapter);
+
+        user = findViewById(R.id.user_welcome);
         Intent intent = getIntent();
         if (intent != null) {
             String houseId = intent.getStringExtra("house_id");
             String houseName = intent.getStringExtra("house_name");
             String houseAddress = intent.getStringExtra("house_address");
-
             addButton = findViewById(R.id.add_house_button);
+            user.setText("Welcome, "+houseName);
             // Query to filter rooms based on houseId
             Query query = databaseUsers.orderByChild("creadby").equalTo(houseId);
 
@@ -75,7 +78,7 @@ public class MainActivity_Rumah extends AppCompatActivity {
                         Rumah ruangan = postSnapshot.getValue(Rumah.class);
                         housess.add(ruangan);
                     }
-                    HouseAdapter adapter = new HouseAdapter(MainActivity_Rumah.this, housess, houseId);
+                    HouseAdapter adapter = new HouseAdapter(MainActivity_Rumah.this, housess, houseId,houseName);
                     houseListView.setAdapter(adapter);
                 }
 
@@ -89,6 +92,8 @@ public class MainActivity_Rumah extends AppCompatActivity {
                 // Open detail activity or show detail dialog
                 Intent hoho = new Intent(MainActivity_Rumah.this, AddEditHouseActivity.class);
                 hoho.putExtra("creadby", houseId);
+                hoho.putExtra("owner", houseName);
+
                 // Add other necessary data
                 MainActivity_Rumah.this.startActivity(hoho);
                 //startActivity(new Intent(MainActivity_Rumah.this, AddEditHouseActivity.class));

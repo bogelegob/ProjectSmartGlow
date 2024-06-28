@@ -23,11 +23,13 @@ public class HouseAdapter extends ArrayAdapter<Rumah> {
     private Activity context;
     private List<Rumah> userList;
     private String creadby;
-    public HouseAdapter(Context context, List<Rumah> houses,String creadby) {
+    private String owner;
+    public HouseAdapter(Context context, List<Rumah> houses,String creadby, String owner) {
         super(context, R.layout.layout_home_list, houses);
         this.context = (Activity) context;
         this.userList = houses;
         this.creadby = creadby;
+        this.owner = owner;
     }
 
     @Override
@@ -43,6 +45,8 @@ public class HouseAdapter extends ArrayAdapter<Rumah> {
         // Lookup view for data population
         ImageView imgDevice = convertView.findViewById(R.id.imgDevice1);
         TextView txtData = convertView.findViewById(R.id.txtData1);
+
+
         TextView txtDataDetail = convertView.findViewById(R.id.txtDataDetail1);
         //Switch btnDevice = convertView.findViewById(R.id.btnDevice1);
 
@@ -53,7 +57,7 @@ public class HouseAdapter extends ArrayAdapter<Rumah> {
             txtData.setText(oi.getNama());
             txtDataDetail.setText(oi.getAlamat_rumah());
             // Set image resource if you have any
-            imgDevice.setImageResource(R.drawable.shofabaru);
+            //imgDevice.setImageResource(R.drawable.shofabaru);
         }
 
         // Set onClickListener for the convertView (item in the list)
@@ -76,6 +80,7 @@ public class HouseAdapter extends ArrayAdapter<Rumah> {
         intent.putExtra("creadby", creadby);
         intent.putExtra("house_name", house.getNama());
         intent.putExtra("house_address", house.getAlamat_rumah());
+        intent.putExtra("owner", owner);
         // Add other necessary data
         getContext().startActivity(intent);
     }
